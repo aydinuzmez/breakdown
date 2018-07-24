@@ -1,0 +1,16 @@
+.export_asset li{
+    border-left:1px solid #000;
+    list-style: none;
+    padding-left: 10px;
+}
+.export_asset{
+    padding-left: 10px;
+}
+
+.left_card{
+    float:left;
+    padding:10px;
+    border-radius:15px;
+    margin-right:5px;
+    }
+
