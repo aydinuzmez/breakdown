@@ -1,0 +1,13 @@
+<div contenteditable="true" class="scenario" ng-click="leftClick()" ng-mousemove="coordinate($event)" ng-right-click="rightClick()" >
+        ssssss merhabalar benim adim recep merhaba adimadim anadolu makeup1 makeup2
+</div>
+
+<div ng-style="context_css()" class="context_menu" ng-show="isThereSelectText()">
+    <p style="border-bottom:1px solid #ccc">Selection: {{right_click}}</p>
+    <div class="left_assets">
+        <ul style="list-style-type: decimal">
+            <li ng-model="all_item" ng-repeat="item in categories | filter:searchItem" ng-click="addAsset(item.id,right_click)">
+                <a href="#"> {{ item.name}} ({{item.assets.length}}) </a> </li>
+        </ul>
+    </div>
+</div>
