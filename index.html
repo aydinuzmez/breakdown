@@ -1,0 +1,41 @@
+<!-- 
+ * 
+ * Copyright (c) 2017 Aydin Uzmez,
+ */ -->
+
+<!DOCTYPE HTML>
+<html ng-app="breakdown_script">
+<head>
+    <meta charset="UTF-8">
+    <title>Anima Breakdown Script v0.0.1</title>
+    <script src="script/angular.min.js"></script>
+    <script src="script/angular-route.min.js"></script>
+	<script src="script/angular-sanitize.js"></script>
+	<script src="script/angular-animate.min.js"></script>
+	<script src="script/jspdf.min.js"></script>
+	<script src="script/html2canvas.min.js"></script>
+	<script src="script/html2pdf_2017.js"></script>
+	<script src="app.js"></script>
+	<script src="factory/export.js"></script>
+	<script src="controller/app_controller.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+
+<body ng-controller="app_ctrl">
+	<header class="navbar navbar-light bg-light" ng-include="template.navbar"></header>
+	<div class="container-fluid" >
+		<div class="row">
+			<!-- sidebar -->
+			<sidebar id="sidebar" ng-include="template.sidebar"  class="col"></sidebar>
+			<!-- CONTENT  -->
+			<content id="content" class="col-10" ng-include="template.content" ng-controller="scenerio"></content>
+		</div>
+		<div class="export" ng-include="template.popExport"></div>
+	</div>
+</body>
+</html>
