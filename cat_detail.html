@@ -1,0 +1,8 @@
+<!-- <p>{{cat.name}} categories detail</p>
+List: -->
+<ul>
+    <li ng-repeat="asset in cat.assets">
+	    <a href= "{{getAssetLink(asset.id)}}">{{asset.name}}</a>
+	</li>
+</ul>
+<div contenteditable="true" style="border:1px solid #000"  my-enter="addAsset(newAsset)" ng-model="newAsset"></div>
